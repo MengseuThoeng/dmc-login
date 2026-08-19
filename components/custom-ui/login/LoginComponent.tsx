@@ -64,7 +64,7 @@ export default function LoginComponent() {
         );
         setMetaTag(
             "og:image",
-            "http://10.100.19.15:8090/api/v1/files/preview?fileName=04c0679b-5310-4ea9-ac60-964a7e21f037_2026-01-02T04-37-12.664672105.png\n",
+            "/images/logo-dmc.jpg",
             true
         );
 
@@ -77,11 +77,11 @@ export default function LoginComponent() {
         );
         setMetaTag(
             "twitter:image",
-            "http://10.100.19.15:8090/api/v1/files/preview?fileName=04c0679b-5310-4ea9-ac60-964a7e21f037_2026-01-02T04-37-12.664672105.png\n"
+            "/images/logo-dmc.jpg"
         );
 
         // Set favicon
-        setFavicon("http://10.100.19.15:8090/api/v1/files/preview?fileName=04c0679b-5310-4ea9-ac60-964a7e21f037_2026-01-02T04-37-12.664672105.png\n");
+        setFavicon("/images/logo-dmc.jpg");
     }, []);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -120,7 +120,8 @@ export default function LoginComponent() {
     };
 
     const handleForgetPassword = () => {
-        window.location.href = "http://10.100.19.15:1168/account/forget-password";
+        const forgetPasswordUrl = process.env.NEXT_PUBLIC_FORGET_PASSWORD_URL || "/account/forget-password";
+        window.location.href = forgetPasswordUrl;
     };
 
     return (
