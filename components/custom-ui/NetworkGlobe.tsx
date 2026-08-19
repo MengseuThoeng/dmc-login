@@ -315,7 +315,7 @@ const FEATURES: FeatureNode[] = [
     label: "ANALYSIS MEMBER",
     icon: (
       <video
-        src="images/gif/somrach.mp4"
+        src="images/gif/vandy_gf.mp4"
         autoPlay
         loop
         muted
